@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Processes", "01_Processes\01_Processes.csproj", "{BA0D03DF-10C9-4BDE-B6E4-6671F794AC1B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_TaskManager", "02_TaskManager\02_TaskManager.csproj", "{3100E3AB-0413-41ED-A6EA-5EEF81631949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Thread", "03_Thread\03_Thread.csproj", "{E79B1205-B9C6-4967-A4F3-9FDA6044CC67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Thread_ProgressBar", "03_Thread_ProgressBar\03_Thread_ProgressBar.csproj", "{C09FA003-77ED-48BC-8E7D-97D56F606D26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{3100E3AB-0413-41ED-A6EA-5EEF81631949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3100E3AB-0413-41ED-A6EA-5EEF81631949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3100E3AB-0413-41ED-A6EA-5EEF81631949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E79B1205-B9C6-4967-A4F3-9FDA6044CC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79B1205-B9C6-4967-A4F3-9FDA6044CC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79B1205-B9C6-4967-A4F3-9FDA6044CC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79B1205-B9C6-4967-A4F3-9FDA6044CC67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09FA003-77ED-48BC-8E7D-97D56F606D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09FA003-77ED-48BC-8E7D-97D56F606D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09FA003-77ED-48BC-8E7D-97D56F606D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09FA003-77ED-48BC-8E7D-97D56F606D26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -60,7 +60,6 @@ internal class Program
         //pr.CloseMainWindow(); // alt + F4
 
         Thread.Sleep(5000);
-
         pr.Kill(); 
         Console.WriteLine("Operation done .....");
 

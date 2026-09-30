@@ -43,7 +43,7 @@ public partial class MainWindow : Window
     private void RadioButton_Click(object sender, RoutedEventArgs e)
     {
         MessageBox.Show(((RadioButton)sender).Content.ToString());
-        int number = int.Parse(((RadioButton)sender).Content.ToString());
+        int number = int.Parse(((RadioButton)sender).Content.ToString()!);
     }
 
     private void Kill_Process(object sender, RoutedEventArgs e)
