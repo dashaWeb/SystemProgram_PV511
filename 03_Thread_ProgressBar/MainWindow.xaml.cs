@@ -20,6 +20,9 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        list.Items.Add(1);
+        list.Items.Add(2);
+        list.Items.Add(3);
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
