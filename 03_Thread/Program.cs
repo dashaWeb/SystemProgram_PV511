@@ -101,7 +101,7 @@
     }
     private static void Main(string[] args)
     {
-
+       
         Thread thread = new Thread(Method);
 
         Console.WriteLine("Thread is going to start .... ");
