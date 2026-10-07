@@ -67,24 +67,45 @@
         #endregion
 
         #region Task Result
-        // Factorial
-        Task<int> task1 = new Task<int>(()=> Factorial(5));
-        var task2 = task1.ContinueWith(Summ);
-        task1.Start();
+        //// Factorial
+        //Task<int> task1 = new Task<int>(()=> Factorial(5));
+        //var task2 = task1.ContinueWith(Summ);
+        //task1.Start();
 
-        //task1.Wait(); // freeze
-        Console.WriteLine($"Factorial number 5 :: {task1.Result}");
-        Console.WriteLine($" Summ Factorial number 5 :: {task2.Result}");
+        ////task1.Wait(); // freeze
+        //Console.WriteLine($"Factorial number 5 :: {task1.Result}");
+        //Console.WriteLine($" Summ Factorial number 5 :: {task2.Result}");
 
-        Task<Book> task3 = new Task<Book>(() =>
+        //Task<Book> task3 = new Task<Book>(() =>
+        //{
+        //    return new Book() { Title = "It", Author = "King" };
+        //});
+        //task3.Start();
+        //Book res = task3.Result;
+        //Console.WriteLine("New Book :: " + res);
+        //Console.WriteLine("Main end");
+
+        #endregion
+
+        #region Inner Task
+        var outer = Task.Factory.StartNew(() =>
         {
-            return new Book() { Title = "It", Author = "King" };
-        });
-        task3.Start();
-        Book res = task3.Result;
-        Console.WriteLine("New Book :: " + res);
-        Console.WriteLine("Main end");
+            Console.WriteLine("Outer task starting ....");
 
+            var inner = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine("Inner task starting ...");
+                Thread.Sleep(2000);
+                Console.WriteLine("Inner task finished ... ");
+            },TaskCreationOptions.AttachedToParent);
+            //inner.Wait();
+            Console.WriteLine("Outer task finished.");
+
+        });
+        Console.WriteLine("End of outer");
+        outer.Wait();
+        Console.WriteLine("End of main");
+        Console.ReadLine();
         #endregion
     }
     static void Display()

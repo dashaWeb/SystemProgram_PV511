@@ -16,6 +16,7 @@ internal class Program
                 for (int i = 0; i < 1_000_000; i++)
                 {
                     Interlocked.Increment(ref Counter.count);
+                    //Counter.count++;
                 }
             });
             threads[i].Start();
