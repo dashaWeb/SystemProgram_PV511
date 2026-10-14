@@ -8,9 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
-            <Button Click="Generate" FontSize="24" Padding="10">Generate</Button>
+            <Button Click="Generate" FontSize="24" Padding="10" KeyDown="Button_KeyDown" >Generate</Button>
         </ToolBar>
         <ProgressBar DockPanel.Dock="Bottom" Height="20" IsIndeterminate="True"></ProgressBar>
+        <TextBox  Width="100" Height="30" KeyDown="TextBox_KeyDown"></TextBox>
         <ListBox x:Name="list"></ListBox>
     </DockPanel>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Microsoft.Win32;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,8 +31,13 @@ public partial class MainWindow : Window
         //list.Items.Add(value);
         //var  task = Task.Run(GenerateValue);
         //list.Items.Add(await Task.Run(GenerateValue)); // freeze
+        //OpenFileDialog dialog = new OpenFileDialog();
+        //if(dialog.ShowDialog() == true)
+        //{
+        //    MessageBox.Show(dialog.FileName);
+        //}
         list.Items.Add(await GenerateValueAsync());
-        //MessageBox.Show("Complate");
+        MessageBox.Show("Complate");
         // async - alow method to use await keywords
         // await - wait task without freezing
 
@@ -51,5 +57,21 @@ public partial class MainWindow : Window
             Thread.Sleep(rnd.Next(5000));
             return rnd.Next(1000);
         });
+    }
+
+    private void Button_KeyDown(object sender, KeyEventArgs e)
+    {
+        if(e.Key == Key.Enter)
+        {
+            MessageBox.Show("Enter ");
+        }
+    }
+
+    private void TextBox_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Enter)
+        {
+            MessageBox.Show("Enter ");
+        }
     }
 }
